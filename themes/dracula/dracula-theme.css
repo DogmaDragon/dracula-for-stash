@@ -3498,23 +3498,14 @@ table-list .comma-list.overflowable:hover {
 	margin-top: 10px;
 }
 
-.performer-height .height-imperial:before {
-    content: ""
-}
-
-.performer-height .height-imperial:after {
-    content: " \2219";
-}
-
 .detail-item-value .height-imperial {
     color: var(--foreground);
     opacity: 1;
 }
 
-.detail-item-value .birthdate,.detail-item-value .height-metric,.detail-item-value .penis-length-imperial,.detail-item-value .weight-imperial {
+.detail-item-value .birthdate,.detail-item-value .height-imperial,.detail-item-value .penis-length-imperial,.detail-item-value .weight-imperial {
     opacity: .65;
 }
-
 
 #performer-page .birthdate {
 	margin-left: 3px
@@ -3531,19 +3522,6 @@ table-list .comma-list.overflowable:hover {
 .performer-height {
     display: flex;
     gap: .4rem;
-}
-
-.height-imperial { 
-    order: -1;
-    opacity: 1;
-}
-
-.height-imperial::before {
-    content: '';
-}
-
-.height-imperial::after {
-    content: " \2219";
 }
 
 /* Add space below performer tag list element */
@@ -3884,14 +3862,13 @@ table-list .comma-list.overflowable:hover {
 }
 
 .setting-section .btn-secondary {
-    color: var(--background);
-    background-color: var(--purple);
+    color: var(--foreground);
+    border: none;
 }
 
 .setting-section .btn-secondary:hover {
-    color: var(--purple);
-    background-color: var(--10pct_purple);
-    border-color: var(--purple);
+    color: var(--red);
+    border: none;
 }
 
 
@@ -4883,4 +4860,9 @@ div.thumbnail-section
 	text-shadow: 1px 1px 1px var(--superdark);
 	stroke: var(--background);
 	stroke-width: 15;
+}
+.tag-card.zoom-0.grid-card.card 
+    button.favorite-button {
+    z-index: 1;
+    top: 0.2em;
 }
